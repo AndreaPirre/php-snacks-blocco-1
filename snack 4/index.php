@@ -1,5 +1,9 @@
+
+
+
 <?php
 // snack 4
+
 
 function getArrayOfIntegers($min, $max, $nItems)
 {
