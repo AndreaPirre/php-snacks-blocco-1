@@ -4,16 +4,32 @@
     $name = $_GET['name'];
     $age = $_GET['age'];
 
-    echo $mail;
-    echo "<br>";
-    echo $name;
-    echo "<br>";
-    echo $age;
 
     $dotPresent = strpos($mail, '.');
     $atPresent = strpos($mail, '@');
-
     $lenghtName = strlen($name);
+    $ageControl = is_numeric($age);
+
+    echo $mail;
+    echo "<br>";
+    echo "<br>";
+
+    if ($dotPresent !== false && $atPresent !== false) {
+
+        echo "ok";
+
+    } else {
+
+        echo "ko";
+    }
+
+    echo "<br>";
+    echo "<br>";
+
+
+    echo $name;
+    echo "<br>";
+    echo "<br>";
 
     if ($lenghtName > 3) {
 
@@ -24,13 +40,23 @@
         echo 'nome non valido';
     }
 
-    if ($dotPresent !== false && $atPresent !== false) {
+    echo "<br>";
+    echo "<br>";
 
-        echo "ok";
+    echo $age;
+    echo "<br>";
+    echo "<br>";
 
-    } else {
 
-        echo "ko";
+
+    if ($ageControl == true) {
+      echo 'età corretta';
+    }else{
+      echo 'età non corretta';
     }
+
+
+
+
 
 ?>
