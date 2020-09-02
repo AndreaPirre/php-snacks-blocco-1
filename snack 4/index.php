@@ -2,24 +2,19 @@
 
 
 <?php
-// snack 4
 
+function randomGen($min, $max, $nItems)
+    {
+         $newArray = [];
 
-function getArrayOfIntegers($min, $max, $nItems)
-{
-    $min = '1';
-    $max = '100';
-    $nItems = '15';
-    $newArray = [];
-
-
-        while (count($newArray) < $nItems) {
-        $number = rand($min, $max);
-        if (!in_array($number, $newArray)) {
-        $newArray[] = $number;
-        }
+             while (count($newArray) < $nItems) {
+             $number = rand($min, $max);
+             if (!in_array($number, $newArray)) {
+             $newArray[] = $number;
+             }
+         }
+         return $newArray;
     }
-    return $newArray;
-}
 
+print_r(randomGen(1,50,15));
 ?>

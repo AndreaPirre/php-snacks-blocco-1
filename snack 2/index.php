@@ -51,9 +51,11 @@
 
     if ($ageControl == true) {
       echo 'età corretta';
-    }else{
+    }else {
       echo 'età non corretta';
     }
+
+
 
 
 
