@@ -13,9 +13,13 @@
     $dotPresent = strpos($mail, '.');
     $atPresent = strpos($mail, '@');
 
-    var_dump($dotPresent);
-    echo "<br>";
-    var_dump($atPresent);
+    if ($dotPresent !== false && $atPresent !== false) {
 
+        echo "ok";
+
+    } else {
+
+        echo "ko";
+    }
 
 ?>
